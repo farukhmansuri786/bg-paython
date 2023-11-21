@@ -157,7 +157,8 @@ def upload():
         # print("---Removing Background...")
         # ------- Call The removeBg Function --------
 
-        return removeBg('uploads/' + file.filename)
+        return 'uploads/' + file.filename
+        # return removeBg('uploads/' + file.filename)
 
 if __name__ == "__main__":
     app.run(debug=False,host="0.0.0.0")
