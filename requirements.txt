@@ -1,5 +1,5 @@
-Flask ==
-torch
-numpy
-opencv-python
-scikit-image
+Flask==3.0.0
+torch==2.1.1
+numpy==1.26.2
+opencv-python=4.8.1.78
+scikit-image=0.22.0
