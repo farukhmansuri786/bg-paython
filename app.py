@@ -99,7 +99,7 @@ def removeBg(imagePath):
       print(f"An error occurred: {e}")
 
     data = {
-            "filename": unique_filename+'.png',
+            "filename": 'static/results/'+unique_filename+'.png',
         }
       
     return json.dumps(data)
@@ -152,14 +152,12 @@ def upload():
 
     if file:
         # Save the uploaded file to a desired location
-        os.makedirs('static/uploads')
-        file.save('static/uploads/' + file.filename)
+        file.save('uploads/' + file.filename)
 
         # print("---Removing Background...")
         # ------- Call The removeBg Function --------
 
-        return 'uploads/' + file.filename
-        # return removeBg('uploads/' + file.filename)
+        return removeBg('uploads/' + file.filename)
 
 if __name__ == "__main__":
     app.run(debug=False,host="0.0.0.0")
