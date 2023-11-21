@@ -152,7 +152,8 @@ def upload():
 
     if file:
         # Save the uploaded file to a desired location
-        file.save('uploads/' + file.filename)
+        os.makedirs('static/uploads')
+        file.save('static/uploads/' + file.filename)
 
         # print("---Removing Background...")
         # ------- Call The removeBg Function --------
